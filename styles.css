@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgb(59, 186, 156),
+    rgba(59, 186, 156, 0.2)
+  );
+}
+.to-do-app {
+  background: white;
+  width: 400px;
+  padding: 30px 28px 50px;
+  border-radius: 50px;
+}
+.logo {
+  display: flex;
+}
+.logo h1 {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.logo h2 img {
+  width: 23px;
+  height: 23px;
+}
+.search {
+  width: 350px;
+  height: 40px;
+  background: #ddd9d981;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+  margin-top: 15px;
+}
+.search button {
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  background: rgb(224, 90, 56);
+  border: 0;
+  outline: none;
+}
+.search input {
+  flex: 1;
+  height: 40px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 15px;
+}
+.search button:active {
+  background: rgb(128, 29, 4);
+}
+.list-container {
+  list-style: none;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+.list-container li {
+  padding-top: 15px;
+  cursor: pointer;
+  position: relative;
+}
+.list-container li::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: -30px;
+}
+.list-container li.checked {
+  text-decoration: line-through;
+}
+.list-container li.checked::before {
+  background-image: url(images/checked.png);
+}

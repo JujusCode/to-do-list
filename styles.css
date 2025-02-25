@@ -60,10 +60,14 @@
 .search button:active {
   background: rgb(128, 29, 4);
 }
+.search button:hover {
+  background: rgba(241, 144, 119, 0.979);
+}
 .list-container {
   list-style: none;
   margin-left: 15px;
   margin-top: 20px;
+  overflow: 2;
 }
 .list-container li {
   padding-top: 15px;
@@ -80,10 +84,21 @@
   background-size: cover;
   background-position: center;
   left: -30px;
+  bottom: 1px;
 }
-.list-container li.checked {
+.checked {
   text-decoration: line-through;
 }
 .list-container li.checked::before {
   background-image: url(images/checked.png);
+}
+.list-container li span {
+  position: absolute;
+  padding: 1px 5px;
+  right: 0px;
+  color: black;
+}
+.list-container li span:hover {
+  background: rgb(223, 99, 68);
+  border-radius: 50%;
 }
